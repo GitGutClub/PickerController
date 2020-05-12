@@ -51,14 +51,14 @@ public class PickerControl_Base: UIControl {
         addConstraint(NSLayoutConstraint(item: cancelBtn, attribute: .bottom, relatedBy: .equal, toItem: toolBar, attribute: .bottom, multiplier: 1, constant: 0))
         cancelBtn.setTitle("Отмена", for: .normal)
         cancelBtn.addTarget(self, action: #selector(didCancel), for: .touchUpInside)
-        
+        cancelBtn.setTitleColor(.red, for: .normal)
         doneBtn.translatesAutoresizingMaskIntoConstraints = false
         addConstraint(NSLayoutConstraint(item: doneBtn, attribute: .trailing, relatedBy: .equal, toItem: toolBar, attribute: .trailing, multiplier: 1, constant: -15))
         addConstraint(NSLayoutConstraint(item: doneBtn, attribute: .top, relatedBy: .equal, toItem: toolBar, attribute: .top, multiplier: 1, constant: 0))
         addConstraint(NSLayoutConstraint(item: doneBtn, attribute: .bottom, relatedBy: .equal, toItem: toolBar, attribute: .bottom, multiplier: 1, constant: 0))
         doneBtn.setTitle("Готово", for: .normal)
         doneBtn.addTarget(self, action: #selector(didDone), for: .touchUpInside)
-        
+        doneBtn.setTitleColor(.red, for: .normal)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         addConstraint(NSLayoutConstraint(item: titleLabel, attribute: .centerX, relatedBy: .equal, toItem: toolBar, attribute: .centerX, multiplier: 1, constant: 0))
         addConstraint(NSLayoutConstraint(item: titleLabel, attribute: .top, relatedBy: .equal, toItem: toolBar, attribute: .top, multiplier: 1, constant: 0))
